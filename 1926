@@ -1,0 +1,28 @@
+#pragma warning (disable: 4996)
+#include<stdio.h>
+int cnt369(int n) {
+	int count = 0;
+	while (n) {
+		int digit = n % 10;
+		if (digit == 3 || digit == 6 || digit == 9) {
+			count++;
+		}
+		n /= 10;
+	}
+	return count;
+}
+int main() {
+	int N;
+	scanf("%d", &N);
+	for (int i = 1; i <= N; i++) {
+		int count = cnt369(i);
+		if (count == 0) {
+			printf("%d", i);
+		}
+		for (int j = 0; j < count; j++) {
+			printf("-");
+		}
+		printf(" ");
+	}
+}
+
