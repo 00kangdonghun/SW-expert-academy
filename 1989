@@ -1,0 +1,27 @@
+#pragma warning (disable: 4996)
+#include <stdio.h>
+#include <string.h>
+int main() {
+	int T, flag = 0;
+	char ch[10];
+	scanf("%d", &T);
+	for (int i = 0; i < T; i++) {
+		scanf("%s", ch);
+		int cnt = 0;
+		int len = strlen(ch);
+		for (int j = 0; j < len / 2; j++) {
+			if (ch[j] == ch[len - j - 1]) {
+				cnt++;
+			}
+		}
+		flag++;
+		if (cnt == len / 2) {
+			printf("#%d %d\n", flag, 1);
+		}
+		else {
+			printf("#%d %d\n", flag, 0);
+		}
+	}
+
+	return 0;
+}
