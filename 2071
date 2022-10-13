@@ -1,0 +1,20 @@
+#pragma warning (disable: 4996)
+#include<stdio.h>
+int main() {
+	int n, arr[10], flag = 0;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		int sum = 0, result = 0;
+		double avg = 0.0;
+		for (int j = 0; j < 10; j++) {
+			scanf("%d", &arr[j]);
+			sum += arr[j];
+		}
+		flag++;
+		avg = (double)sum / 10;
+		result = (int)(avg + 0.5);
+		printf("#%d %d\n", flag, result);
+	}
+
+	return 0;
+}
