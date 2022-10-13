@@ -1,0 +1,19 @@
+#pragma warning (disable: 4996)
+#include<stdio.h>
+int main() {
+	int T, arr[10], flag = 0;
+	scanf("%d", &T);
+	for (int i = 0; i < T; i++) {
+		int sum = 0;
+		for (int i = 0; i < 10; i++) {
+			scanf("%d", &arr[i]);
+			if (arr[i] % 2 == 1) {
+				sum += arr[i];
+			}
+		}
+		flag++;
+		printf("#%d %d\n", flag, sum);
+	}
+
+	return 0;
+}
