@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+   int T,P,Q,R,S,W;
+   scanf("%d",&T);
+   for(int i=0;i<T;i++){
+      scanf("%d %d %d %d %d",&P,&Q,&R,&S,&W);
+      if(W>R){
+         if(W*P>Q+(W-R)*S){
+            printf("#%d %d\n",i+1,Q+(W-R)*S);
+         }
+         else{
+            printf("#%d %d\n",i+1,W*P);
+         }
+      }
+      else{
+         if(W*P>Q){
+            printf("#%d %d\n",i+1,Q);
+         }
+         else{
+            printf("#%d %d\n",i+1,W*P);
+         }
+      }
+   }
+
+   return 0;
+}
